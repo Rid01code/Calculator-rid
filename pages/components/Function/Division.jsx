@@ -40,15 +40,16 @@ const Division = () => {
 
       <form className={styles.form} onSubmit={divideHandler} onKeyDown={handleKeyDown}>
 
-        <input placeholder='Number' className={styles.input} type="number" onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} />
+        <input placeholder='Number 1' className={styles.input} type="number" onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} />
 
         <input className={styles.sign} value='/' readOnly />
         
-        <input placeholder='Number' className={styles.input} type="number" onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} />
+        <input placeholder='Number 2' className={styles.input} type="number" onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} />
 
-        <input className={styles.equal} value="=" type="submit" />
-
-        <Ans ans={divideAnswer} />
+        <div className={styles.ansDiv}>
+          <input className={styles.equal} type='submit' value="=" />
+          <div className={styles.ansBox}><Ans ans={divideAnswer} /></div>
+        </div>
         
       </form>
 

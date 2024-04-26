@@ -9,6 +9,7 @@ const Addition = () => {
   let [inputVal1, setInputVal1] = useState();
   let [inputVal2, setInputVal2] = useState();
   let [addAnswer, setAddAnswer] = useState("");
+  
   const router =useRouter()
 
   let addHandler = () => {
@@ -38,15 +39,15 @@ const Addition = () => {
 
       <form onSubmit={addHandler} onKeyDown={handleKeyDown} className={styles.form}>
 
-        <input placeholder='Number' onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} className={styles.input} type='number'  />
+        <input placeholder='Number 1' onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} className={styles.input} type='number'  />
 
         <input className={styles.sign} value='+' readOnly/>
 
-        <input placeholder='Number' onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} className={styles.input} type='number' />
+        <input placeholder='Number 2' onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} className={styles.input} type='number' />
 
         <div className={styles.ansDiv}>
-            <input className={styles.equal} type='submit' value="=" />
-            <Ans ans={addAnswer} />
+          <input className={styles.equal} type='submit' value="=" />
+          <div className={styles.ansBox}><Ans ans={addAnswer} /></div>
         </div>
 
         

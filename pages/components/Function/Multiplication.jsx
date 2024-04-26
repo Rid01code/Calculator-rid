@@ -40,15 +40,16 @@ const Multiplication = () => {
 
       <form className={styles.form} onSubmit={multiplyHandler} onKeyDown={handleKeyDown}>
 
-        <input className={styles.input} type="number" onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} />
+        <input placeholder='Number 1' className={styles.input} type="number" onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} />
 
         <input className={styles.sign} value='x' readOnly />
         
-        <input className={styles.input} type="number" onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} />
+        <input placeholder='Number 2' className={styles.input} type="number" onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} />
 
-        <input className={styles.equal} value="=" type="submit" />
-
-        <Ans ans={ multiplyAnswer} />
+        <div className={styles.ansDiv}>
+          <input className={styles.equal} type='submit' value="=" />
+          <div className={styles.ansBox}><Ans ans={multiplyAnswer} /></div>
+        </div>
         
       </form>
 

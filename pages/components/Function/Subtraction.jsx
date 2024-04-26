@@ -39,15 +39,16 @@ const Subtraction = () => {
 
       <form className={styles.form} onSubmit={subtractionHandler} onKeyDown={handleKeyDown}>
 
-        <input className={styles.input} type="number" onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} />
+        <input placeholder='Number 1' className={styles.input} type="number" onChange={(event) => { setInputVal1(parseInt(event.target.value)) }} />
 
         <input className={styles.sign} value='-' readOnly />
         
-        <input className={styles.input} type="number" onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} />
+        <input placeholder='Number 2' className={styles.input} type="number" onChange={(event) => { setInputVal2(parseInt(event.target.value)) }} />
 
-        <input className={styles.equal} value="=" type="submit" />
-
-        <Ans ans={ subtractAnswer} />
+        <div className={styles.ansDiv}>
+          <input className={styles.equal} type='submit' value="=" />
+          <div className={styles.ansBox}><Ans ans={subtractAnswer} /></div>
+        </div>
       </form>
 
       <button className={styles.refresh} onClick={()=>{refreshHandler()}}>
