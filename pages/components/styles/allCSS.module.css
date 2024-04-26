@@ -1,0 +1,83 @@
+.mainDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+.h1{
+  font-size: xxx-large;
+}
+.form{
+  width: 100%;
+  height: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button{
+  width: 23vmax;
+  height: 5vmax;
+  border-radius: 10px;
+  font-size: 2vmax;
+  font-weight: bold;
+  color: white;
+  padding: 0px 3px;
+}
+.backButton{
+  width: 23vmax;
+  height: 5vmax;
+  border-radius: 10px;
+  font-size: 2vmax;
+  font-weight: bold;
+  color: white;
+  background-color: #000000;
+  padding: 0px 3px;
+  margin-bottom: 10px;
+}
+.refresh{
+    width: 23vmax;
+  height: 5vmax;
+  border-radius: 10px;
+  font-size: 2vmax;
+  font-weight: bold;
+  color: white;
+  background-color: gainsboro;
+  padding: 0px 3px;
+}
+.input{
+  width: 20vmax;
+  height: 7vmax;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  font-size: xx-large;
+  margin: 0 2vmax;
+  text-align: center;
+}
+.sign{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  font-size: xx-large;
+  width: 2vmax;
+}
+.equal{
+  font-size: xxx-large;
+  margin: 0 2vmax;
+  color: aquamarine;
+}
+.ans{
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ansDiv{
+  display: flex;
+}
+@media only screen and (max-width: 600px){
+  .form{
+    flex-direction: column;
+    height: 80vw;
+  }
+}
